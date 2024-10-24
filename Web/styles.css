@@ -1,0 +1,24 @@
+/*.auth-form{
+ali
+}
+*/
+body{
+    margin:1 rem;
+    padding:1 rem;
+    background-color: #f5f;
+    height:100vh;
+    width:100vw;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border: 1px solid grey;
+}
+.auth-form{
+    height:40 vh;
+    width: 20 vw;
+    background-color:grey;
+    border:1px solid aqua;
+
+}
+
+
