@@ -7,15 +7,16 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <form class="Login-form">
+    <form class="Login-form"  onsubmit="Login(event)">
         <title>Login Form</title>
-  <input type="email" name="" id="" placeholder="Email"  class="login-email" required> 
+  <input type="email" name="" id="email" placeholder="Email"  class="login-email" required> 
   <br><br>
-<input type="password" name=""  id="" placeholder="Password" class="login-btn" required>
+<input type="password" name=""  id="password" placeholder="Password" class="login-btn" required>
 <br>
 <br>
 <button type="submit">Login</button>
 </form>
+<input type="button" value="" onclick="myfunction()">
 </body>
 <script>
     console.log("hello");
@@ -37,5 +38,47 @@
   console.log(obj,obj2);
 let arr=["a",obj,obj2,x]
 console.log(arr);
+let arr2=[1,2,3,4,5,6];
+let arr3=[arr,arr2];
+console.log(arr3);
+let arr4=[...arr,"Yamini",...arr2];
+console.log(arr4);
+function myfunction()
+{
+  console.error("hello man")
+  console.warn("hello man")
+
+}
+myfunction()
+function Login(event)
+{
+  event.preventDefault();
+  let email = document.getElementById('email').value;
+  let password = document.getElementById('password').value;
+  console.log("Login:"+email+" "+password);
+  if(password.length<5){
+     alert('password should contain more than 5 letters')
+  }
+  else if(email==="admin@gmail.com" && password==="123456"){
+   alert('login success!')
+   API()
+  }
+  else{
+  alert("Invalid credentials")
+  }
+  }
+  async function API()
+  {
+    console.log("called API");
+    try{
+const response =await fetch('https://671b71082c842d92c37fed05.mockapi.io/products_application/Projects')
+if(response.status===200)
+console.log("success")
+console.log(await response.json())
+    }
+    catch(error){
+      console.error(error)
+    }
+  }
 </script>
-</html>
+</html> 
