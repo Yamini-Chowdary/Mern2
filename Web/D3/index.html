@@ -14,9 +14,11 @@
 <input type="password" name=""  id="password" placeholder="Password" class="login-btn" required>
 <br>
 <br>
+<input type="button" value="click" onclick="myfunction()">
+<br>
+<br>
 <button type="submit">Login</button>
 </form>
-<input type="button" value="" onclick="myfunction()">
 </body>
 <script>
     console.log("hello");
@@ -35,6 +37,9 @@
     age:0,
     isalive:true
   }
+  console.log(obj2.name)
+  const {name,loc,age,isalive}=obj2
+  console.log(name)
   console.log(obj,obj2);
 let arr=["a",obj,obj2,x]
 console.log(arr);
