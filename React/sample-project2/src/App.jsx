@@ -1,5 +1,4 @@
 import Navbar from "./components/Navbar"
-
 const App = () => {
     const data = {
         appname: "Hello"
