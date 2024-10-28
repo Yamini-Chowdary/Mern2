@@ -9,6 +9,7 @@ const App = () => {
         <>
        <p className="text-red-500">{test} </p>
             <Navbar appdata={data} logo ={logodata} />
+
         </>
     )
 }

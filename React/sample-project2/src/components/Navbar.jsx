@@ -21,3 +21,4 @@ const Navbar=({appdata,logo})=>{
     )
 }
 export default Navbar
+
