@@ -1,18 +1,17 @@
 const express = require('express')
-const port = 4000
+const Port = 3000
 
 const app = express()
 
 app.use(express.json())
 
-
-
-app.get('/',(req,res)=>{
-     res.status(200).json("Hello ");
+app.get('/', (req, res) => {
+    res.status(200).json("Hello");
 })
 
-app.listen(port,()=>{
-   // console.log("Server is running in Port:" + port)
-    console.log(`Server is running in Port: ${port}`)
-    console.log("Hello")
-})    
+
+app.listen(Port, () => {
+    // console.log("Server is running in Port : " + Port)
+    console.log(`Server is running in Port : ${Port}`)
+
+})
