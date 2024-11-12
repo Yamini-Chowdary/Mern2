@@ -1,9 +1,9 @@
 const mongoose = require('mongoose')
 
 const ProductsSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: true
+    title: { // Property/Filed title
+        type: String, // Data type of the Property
+        required: true // Nullable(false) or NotNullable(true) 
     },
     img: {
         type: String,
@@ -18,4 +18,11 @@ const ProductsSchema = new mongoose.Schema({
 
 const Products = mongoose.model("Products", ProductsSchema)
 
-module.exports = Products;
+module.exports = Products
+
+
+
+// name: string :required
+// email: string: required : unique
+// phone: number: required : unique
+// address: string 
