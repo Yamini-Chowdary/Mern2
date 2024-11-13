@@ -1,7 +1,17 @@
 const express = require('express')
 const router = express.Router();
 const Orders = require('../models/OrdersModel')
-//const validate = require('../config/auth')
+const validate = require('../config/auth')
+
+router.get('/count', async (req, res) => {
+    try {
+        const count = await Orders.countDocuments()
+        return res.status(200).json({ count: count })
+    } catch (error) {
+        return res.status(500).json({ message: error.message })
+    }
+})
+
 router.get('/all', async (req, res) => {
     try {
         const orders = await Orders.find()
@@ -14,8 +24,8 @@ router.get('/all', async (req, res) => {
 router.post('/add', async (req, res) => {
     try {
         const neworder = new Orders(req.body)
-        const { uid, pid, phone, address, total,orderedAt } = neworder
-        if (!uid || !pid || !phone || !address || !total||!orderedAt) {
+        const { uid, pid, phone, address, total } = neworder
+        if (!uid || !pid || !email || !phone || !address || total) {
             res.status(400).json({ message: "All fields required" })
         }
         //TODO : Add User & Product Validation 

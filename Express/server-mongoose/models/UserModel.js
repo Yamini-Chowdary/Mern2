@@ -20,11 +20,10 @@ const UsersSchema = new mongoose.Schema({
         required: true,
         // unique:true
     },
-    role:{
-        type:String,
-        enum:["ADMIN","USER"],
-        required:true
-    }
+    password: {
+        type: String,
+        required: false,
+    },
 })
 
 const Users = mongoose.model("Users", UsersSchema)

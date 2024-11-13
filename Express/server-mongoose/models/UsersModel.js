@@ -23,7 +23,11 @@ const UsersSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true,
-    }
+    },
+    address: {
+        type: String,
+        required: false,
+    },
 })
 
 const Users = mongoose.model("Users", UsersSchema)

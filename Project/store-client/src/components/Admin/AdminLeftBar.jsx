@@ -28,7 +28,7 @@ const AdminLeftBar = () => {
     <div className='w-full h-screen shadow-purple-400 shadow-md flex justify-center items-center'>
       <div className='h-full w-full flex flex-col'>
         <div className='h-[10%] w-full text-purple-500 flex justify-center font-bold text-2xl items-center'>
-          Max Store
+          MaX Store
         </div>
         <div className='h-[80%] w-full flex flex-col items-center '>
           {Linksdata.map((link, index) => (
